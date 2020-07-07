@@ -1,0 +1,54 @@
+# Site
+name:          'Thakurli Boys'
+description:   'Thakurli Boys'
+logo:          'assets/images/logo.png'
+# favicon:       'assets/images/favicon.ico' TODO Create Favicon and Add it
+baseurl:       ''
+# disqus:      'demowebsite'  TODO create and add disqus id
+email:         'thakurli@thakuli.com'
+
+include:       ["_pages"]
+permalink:     /:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+authors:
+    deepak:
+      name:    Deepak
+      site:    https://deepak.thakurli.com
+      avatar:  assets/images/avatar1.jpg
+      bio:     "Hi, I am Deepak, Thakurlikar"
+      email:   deepak@thakurli.com
+      twitter: https://twitter.com/askdeven
+
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path:    "_posts"
+    values:
+      layout:  post
+      author:  deepak
+      avatar:  /assets/images/avatar1.jpg
+
+  # all pages
+  - scope:
+      path:    "_pages"
+    values:
+      layout:  page
+
+# Syntax
+markdown:      kramdown
+highlighter:   rouge
+
+# Paginate
+paginate:      10
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude:       [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
